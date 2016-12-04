@@ -13,4 +13,5 @@ var archiveTask = chron.scheduleJob(rule, function() {
     t.post('/1/lists/' + process.env.LIST_ID + '/archiveAllCards', function(err, data) { console.log(data); });
 });
 
+app.use(function(req, res) { res.send("Yea still working!") })
 app.listen(process.env.PORT || 8000)
