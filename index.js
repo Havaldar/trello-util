@@ -1,9 +1,7 @@
 var express     = require('express');
 var chron       = require('node-schedule');
 var Trello      = require('node-trello');
-var env         = require('node-env-file');
 
-env(__dirname + '/.env');
 var app         = express();
 var trello      = new Trello(process.env.TRELLO_KEY, process.env.TRELLO_TOKEN);
 var rule        = new chron.RecurrenceRule();
