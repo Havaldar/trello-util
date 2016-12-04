@@ -12,3 +12,5 @@ rule.minute     = 0;
 var archiveTask = chron.scheduleJob(rule, function() {
     t.post('/1/lists/' + process.env.LIST_ID + '/archiveAllCards', function(err, data) { console.log(data); });
 });
+
+app.listen(process.env.PORT || 8000)
